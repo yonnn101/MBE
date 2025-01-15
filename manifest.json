@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Grade Submission Notifier (ASTU)",
+  "version": "1.0",
+  "description": "Grade Submission Notifier",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_security_policy": {
+    "script-src": "'self'",
+    "object-src": "'none'",
+    "connect-src": "'self' http://*/* https://*/*"
+  }
+}
