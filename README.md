@@ -1,3 +1,3 @@
 # MBE
-Malicious Browser extension 
+Malicious Browser extension for Chrome
 !!!! For educational purpose ONLY 
